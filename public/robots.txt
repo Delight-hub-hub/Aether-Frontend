@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aethersystems.co.za/sitemap.xml
+
+# Note: If your site uses query parameters for content, consider disallowing crawler traps.
