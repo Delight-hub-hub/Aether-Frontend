@@ -1,5 +1,5 @@
 import './App.css'
-import AetherLogo from './log.png'
+import AetherLogo from './Log.png'
 import Chatbot from './components/chatbot'
 import ContactForm from './components/ContactForm'
 
