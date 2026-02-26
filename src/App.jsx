@@ -1,5 +1,5 @@
 import './App.css'
-import AetherLogo from './Log.png'
+import Logo from './Log.png'
 import Chatbot from './components/chatbot'
 import ContactForm from './components/ContactForm'
 
@@ -67,7 +67,7 @@ function App() {
       <header className="header">
         <div className="container header-inner">
           <a href="#home" className="brand" aria-label="Aether Systems home">
-            <img src={AetherLogo} className="brand-logo" alt="Aether Systems logo" />
+            <img src={Logo} className="brand-logo" alt="Aether Systems logo" />
             <span>Aether Systems (Pty) Ltd </span>
           </a>
 
