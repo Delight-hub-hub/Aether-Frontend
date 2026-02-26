@@ -2,10 +2,10 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
+    name: " ",
+    email: " ",
+    phone: " ",
+    message: " "
   });
 
   const [status, setStatus] = useState({ type: "idle", message: "" });
@@ -39,7 +39,7 @@ export default function ContactForm() {
       if (!response.ok) throw new Error(data.error);
 
       setStatus({ type: "success", message: "Submitted successfully." });
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: " ", email: " ", phone: " ", message: " " });
     } catch (error) {
       setStatus({ type: "error", message: `Error: ${error.message}` });
     }
