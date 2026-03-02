@@ -23,8 +23,8 @@ const ProjectCard = ({ project }) => {
 
 export default function ProjectsSection({ projects }) {
   const defaultProjects = Array.from({ length: 6 }).map((_, i) => ({
-    title: `Project ${i + 1}`,
-    description: 'Short one-line summary. Replace this with your project instructions.',
+    title: `Client Project ${i + 1}`,
+    description: 'Delivered software solution for an active business workflow.',
     image: '',
     link: '#',
     tech: 'React • Vite'
@@ -36,7 +36,7 @@ export default function ProjectsSection({ projects }) {
     <section id="ongoing-projects" style={{ padding: '48px 20px', background: 'linear-gradient(180deg,#f8fafc,transparent)' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <h2 style={{ fontSize: 28, marginBottom: 8 }}>Ongoing Projects</h2>
-        <p style={{ color: '#6b7280', marginBottom: 20 }}>Below are placeholders for up to six projects. Replace the objects passed into the `projects` prop with your real entries.</p>
+        <p style={{ color: '#6b7280', marginBottom: 20 }}>Recent client projects and active internal platform work.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 18 }}>
           {list.map((p, idx) => (
             <ProjectCard key={idx} project={p} />
