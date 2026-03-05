@@ -1,6 +1,10 @@
 import './App.css'
 import Logo from './Log.png'
 import AetherVisuals from './aethervisuals.jpg'
+import CampaignPoster from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_16.png'
+import ConceptToCodeVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_19.png'
+import AetherIalVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_26.png'
+import ServicePillarsVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_47.png'
 import Chatbot from './components/chatbot'
 import ContactForm from './components/ContactForm'
 
@@ -86,6 +90,33 @@ const projects = [
   }
 ]
 
+const visuals = [
+  {
+    image: CampaignPoster,
+    title: 'Digital Future Campaign',
+    text: 'Brand-led campaign visual focused on product vision, software delivery, and cross-device design.',
+    alt: 'Aether Systems campaign poster showing vision, business, and experience themes'
+  },
+  {
+    image: ConceptToCodeVisual,
+    title: 'Concept-to-Launch Storyboard',
+    text: 'A four-part creative that communicates the journey from product ideation to business launch.',
+    alt: 'Aether Systems concept to code marketing visual showing ideation, development, multi-platform, and launch'
+  },
+  {
+    image: AetherIalVisual,
+    title: 'Aether-IAL Product Mockup',
+    text: 'Multi-device product preview centered on Aether Architect, Ascent, and Cognition service offerings.',
+    alt: 'Aether Systems multi-device product mockup with Aether Architect, Ascent, and Cognition'
+  },
+  {
+    image: ServicePillarsVisual,
+    title: 'Service Pillars Overview',
+    text: 'A service matrix visual highlighting custom software, app development, cloud, AI integration, and modernization.',
+    alt: 'Aether Systems service pillars visual for software development and modernization'
+  }
+]
+
 const caseStudies = [
   {
     id: 'case-brick-renovations',
@@ -141,6 +172,7 @@ function App() {
             <a href="#services">Services</a>
             <a href="#process">Process</a>
             <a href="#projects">Projects</a>
+            <a href="#visuals">Visuals</a>
             <a href="#industries">Industries</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -244,6 +276,31 @@ function App() {
                     )}
                   </div>
                 </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="visuals" className="visuals section">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Brand Visuals</p>
+              <h2>Recent campaign and product visual concepts</h2>
+              <p>
+                Newly added creative assets used to communicate Aether Systems positioning,
+                delivery capabilities, and product direction.
+              </p>
+            </div>
+
+            <div className="visuals-grid">
+              {visuals.map((item) => (
+                <figure key={item.title} className="visual-card">
+                  <img src={item.image} alt={item.alt} loading="lazy" />
+                  <figcaption>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </div>
