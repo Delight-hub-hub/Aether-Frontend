@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react'
 import Logo from './Log.png'
 import AetherVisuals from './aethervisuals.jpg'
 import CampaignPoster from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_16.png'
@@ -156,7 +157,23 @@ const caseStudies = [
 
 const sectors = ['Government & Public Services', 'Financial Services', 'Healthcare & HealthTech', 'Commerce & Retail', 'Education Platforms', 'Logistics & Utilities']
 
+const quickLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#services', label: 'Services' },
+  { href: '#process', label: 'Process' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#visuals', label: 'Visuals' },
+  { href: '#industries', label: 'Industries' },
+  { href: '#contact', label: 'Contact' }
+]
+
 function App() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
+
+  const handleNavLinkClick = () => {
+    setMobileNavOpen(false)
+  }
+
   return (
     <div className="app">
       <a className="skip-link" href="#main">Skip to content</a>
@@ -168,13 +185,25 @@ function App() {
             <span>Aether Systems (Pty) Ltd </span>
           </a>
 
-          <nav className="nav" aria-label="Primary">
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#projects">Projects</a>
-            <a href="#visuals">Visuals</a>
-            <a href="#industries">Industries</a>
-            <a href="#contact">Contact</a>
+          <button
+            className="nav-toggle"
+            aria-expanded={mobileNavOpen}
+            aria-controls="primary-nav"
+            aria-label={mobileNavOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            onClick={() => setMobileNavOpen((open) => !open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <nav id="primary-nav" className={`nav ${mobileNavOpen ? 'open' : ''}`} aria-label="Primary">
+            <a href="#services" onClick={handleNavLinkClick}>Services</a>
+            <a href="#process" onClick={handleNavLinkClick}>Process</a>
+            <a href="#projects" onClick={handleNavLinkClick}>Projects</a>
+            <a href="#visuals" onClick={handleNavLinkClick}>Visuals</a>
+            <a href="#industries" onClick={handleNavLinkClick}>Industries</a>
+            <a href="#contact" onClick={handleNavLinkClick}>Contact</a>
           </nav>
         </div>
       </header>
@@ -383,6 +412,14 @@ function App() {
                     Best for teams that need a reliable engineering partner to build websites, internal systems,
                     and long-term digital platforms.
                   </p>
+                </div>
+                <div className="quick-links">
+                  <h3>Quick Links</h3>
+                  <div className="quick-links-grid">
+                    {quickLinks.map((link) => (
+                      <a key={link.href} href={link.href}>{link.label}</a>
+                    ))}
+                  </div>
                 </div>
               </div>
 
