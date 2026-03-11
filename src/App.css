@@ -561,6 +561,105 @@ textarea:focus-visible {
   color: #8a3412;
 }
 
+.section-note {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+}
+
+.pricing {
+  background: #f7f9fc;
+}
+
+.pricing-track {
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.pricing-track + .pricing-track {
+  margin-top: 16px;
+}
+
+.pricing-track-inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  animation: pricingSlide 12s ease-in-out infinite alternate;
+}
+
+.pricing-track.paused .pricing-track-inner {
+  animation-play-state: paused;
+}
+
+.pricing-track--static .pricing-track-inner {
+  animation-duration: 18s;
+}
+
+.pricing-card {
+  border-radius: 14px;
+  padding: 18px;
+  background: #f8fbff;
+  border: 1px solid #d6e1ef;
+}
+
+.pricing-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #d6e1ef;
+  margin-bottom: 12px;
+}
+
+.pricing-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.pricing-price {
+  margin: 8px 0 6px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f3d74;
+}
+
+.pricing-label {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8a3412;
+}
+
+.pricing-copy {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+}
+
+.pricing-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #334762;
+}
+
+.pricing-card--wide {
+  grid-column: 1 / -1;
+}
+
+@keyframes pricingSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+
 .contact {
   background: #0a1628;
   color: #fff;
@@ -902,7 +1001,8 @@ textarea:focus-visible {
   .services-grid,
   .process-grid,
   .projects-grid,
-  .visuals-grid {
+  .visuals-grid,
+  .pricing-track-inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -936,7 +1036,8 @@ textarea:focus-visible {
   .process-grid,
   .projects-grid,
   .visuals-grid,
-  .contact-info {
+  .contact-info,
+  .pricing-track-inner {
     grid-template-columns: 1fr;
   }
 

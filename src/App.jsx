@@ -6,6 +6,12 @@ import CampaignPoster from './ElevenLabs_image_nano-banana-2_make a marke..._202
 import ConceptToCodeVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_19.png'
 import AetherIalVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_26.png'
 import ServicePillarsVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_47.png'
+import SimpleWeb from './simple_web.jpg'
+import AdvancedWeb from './advanced_web.jpg'
+import ProWeb from './pro_web.jpg'
+import SimpleStore from './simple_store.jpg'
+import AdvancedStore from './advanced_store.jpg'
+import ProStore from './pro_store.jpg'
 import Chatbot from './components/chatbot'
 import ContactForm from './components/ContactForm'
 
@@ -45,6 +51,12 @@ const services = [
     summary:
       'Codebase audits, performance improvements, and long-term engineering support for existing products.',
     outcomes: ['Lower technical debt', 'Stronger security posture', 'Sustained delivery']
+  },
+  {
+    title: 'Software & Website Auditing',
+    summary:
+      'Technical audits for websites and software platforms covering performance, security, accessibility, and maintainability.',
+    outcomes: ['Actionable audit report', 'Prioritized fixes', 'Clear improvement roadmap']
   }
 ]
 
@@ -164,15 +176,72 @@ const quickLinks = [
   { href: '#projects', label: 'Projects' },
   { href: '#visuals', label: 'Visuals' },
   { href: '#industries', label: 'Industries' },
+  { href: '#pricing', label: 'Pricing' },
   { href: '#contact', label: 'Contact' }
 ]
 
 function App() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  const [pricingPaused, setPricingPaused] = useState(false)
 
   const handleNavLinkClick = () => {
     setMobileNavOpen(false)
   }
+
+  const websitePackages = [
+    {
+      image: SimpleWeb,
+      alt: 'Simple website package preview',
+      name: 'Basic Static',
+      price: 'From R2000',
+      features: ['Single-page layout', 'Mobile responsive design', 'Contact form setup', '1 revision cycle']
+    },
+    {
+      image: AdvancedWeb,
+      alt: 'Advanced website package preview',
+      name: 'Advanced',
+      price: 'From R3500',
+      features: ['Up to 5 pages', 'Custom UI sections', 'SEO-ready structure', '2 revision cycles']
+    },
+    {
+      image: ProWeb,
+      alt: 'Pro website package preview',
+      name: 'Pro',
+      price: 'From R5000',
+      features: ['Multi-page site', 'Animations and interactions', 'Copy and content guidance', 'Priority support']
+    }
+  ]
+
+  const ecommercePackages = [
+    {
+      image: SimpleStore,
+      alt: 'Simple ecommerce package preview',
+      name: 'Basic',
+      price: 'From R3000',
+      features: ['Starter storefront', 'Product listing setup', 'Payment gateway setup', 'Basic analytics']
+    },
+    {
+      image: AdvancedStore,
+      alt: 'Advanced ecommerce package preview',
+      name: 'Advanced',
+      price: 'From R5000',
+      features: ['Up to 50 products', 'Custom product pages', 'Inventory tracking', '2 revision cycles']
+    },
+    {
+      image: ProStore,
+      alt: 'Pro ecommerce package preview',
+      name: 'Pro',
+      price: 'From R8000',
+      features: ['Full ecommerce build', 'Automation flows', 'Marketing integrations', 'Priority support']
+    }
+  ]
+
+  const pricingFactors = [
+    'Scope of required features, integrations, and data sources.',
+    'Complexity of automation, security, and compliance requirements.',
+    'Volume of content migration or system modernization.',
+    'Timeline expectations and level of ongoing support.'
+  ]
 
   return (
     <div className="app">
@@ -203,6 +272,7 @@ function App() {
             <a href="#projects" onClick={handleNavLinkClick}>Projects</a>
             <a href="#visuals" onClick={handleNavLinkClick}>Visuals</a>
             <a href="#industries" onClick={handleNavLinkClick}>Industries</a>
+            <a href="#pricing" onClick={handleNavLinkClick}>Pricing</a>
             <a href="#contact" onClick={handleNavLinkClick}>Contact</a>
           </nav>
         </div>
@@ -384,6 +454,71 @@ function App() {
               {sectors.map((sector) => (
                 <div key={sector} className="sector-chip">{sector}</div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" className="pricing section">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Pricing</p>
+              <h2>Website design, ecommerce, and flexible service pricing</h2>
+              <p className="section-note">View the prices and choose the best suitable for your business.</p>
+            </div>
+
+            <div className={`pricing-track ${pricingPaused ? 'paused' : ''}`} onClick={() => setPricingPaused((prev) => !prev)}>
+              <div className="pricing-track-inner">
+                {websitePackages.map((tier) => (
+                  <article key={tier.name} className="pricing-card">
+                    <img className="pricing-image" src={tier.image} alt={tier.alt} loading="lazy" />
+                    <h3>{tier.name}</h3>
+                    <p className="pricing-price">{tier.price}</p>
+                    <p className="pricing-label">Website Design Package</p>
+                    <ul>
+                      {tier.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className={`pricing-track ${pricingPaused ? 'paused' : ''}`} onClick={() => setPricingPaused((prev) => !prev)}>
+              <div className="pricing-track-inner">
+                {ecommercePackages.map((tier) => (
+                  <article key={tier.name} className="pricing-card">
+                    <img className="pricing-image" src={tier.image} alt={tier.alt} loading="lazy" />
+                    <h3>{tier.name}</h3>
+                    <p className="pricing-price">{tier.price}</p>
+                    <p className="pricing-label">Ecommerce Package</p>
+                    <ul>
+                      {tier.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className={`pricing-track pricing-track--static ${pricingPaused ? 'paused' : ''}`} onClick={() => setPricingPaused((prev) => !prev)}>
+              <div className="pricing-track-inner">
+                <article className="pricing-card pricing-card--wide">
+                  <img className="pricing-image" src={ProWeb} alt="Other services pricing discovery preview" loading="lazy" />
+                  <h3>Other Services</h3>
+                  <p className="pricing-price">Custom pricing</p>
+                  <p className="pricing-label">Scope-based engagements</p>
+                  <p className="pricing-copy">
+                    Some services do not fit fixed packages. Pricing is determined after a discovery call and a short technical review.
+                  </p>
+                  <ul>
+                    {pricingFactors.map((factor) => (
+                      <li key={factor}>{factor}</li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
             </div>
           </div>
         </section>
