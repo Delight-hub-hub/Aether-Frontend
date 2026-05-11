@@ -6,242 +6,173 @@ import CampaignPoster from './ElevenLabs_image_nano-banana-2_make a marke..._202
 import ConceptToCodeVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_19.png'
 import AetherIalVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_26.png'
 import ServicePillarsVisual from './ElevenLabs_image_nano-banana-2_make a marke..._2026-03-04T19_15_47.png'
-import SimpleWeb from './simple_web.jpg'
-import AdvancedWeb from './advanced_web.jpg'
-import ProWeb from './pro_web.jpg'
-import SimpleStore from './simple_store.jpg'
-import AdvancedStore from './advanced_store.jpg'
-import ProStore from './pro_store.jpg'
 import Chatbot from './components/chatbot'
 import ContactForm from './components/ContactForm'
 
-const services = [
+const serviceAreas = [
   {
-    title: 'Custom Web Platforms',
-    summary:
-      'Design and development of secure web platforms for internal operations, citizen services, and customer portals.',
-    outcomes: ['Faster service delivery', 'Lower manual workload', 'Clear ownership of code']
+    title: 'Construction Operations Software',
+    summary: 'Internal platforms for dispatch, reporting, approvals, and daily production control across active sites.',
+    outcomes: ['Fewer spreadsheet handoffs', 'Stronger site visibility', 'Cleaner operational accountability']
   },
   {
-    title: 'Business Process Automation',
-    summary:
-      'Workflow automation for approvals, onboarding, compliance, and reporting across departments.',
-    outcomes: ['Reduced turnaround times', 'Fewer process errors', 'Consistent operations']
+    title: 'Digital Twin & Site Intelligence',
+    summary: 'Interactive dashboards and asset views that turn field data into a live operating picture for leadership teams.',
+    outcomes: ['Real-time project state', 'Faster issue escalation', 'Better forecasting decisions']
   },
   {
-    title: 'Data & Reporting Systems',
-    summary:
-      'Unified data pipelines and dashboards that give leadership teams real-time operational visibility.',
-    outcomes: ['Trusted reporting', 'Single source of truth', 'Better decision speed']
+    title: 'Workflow Automation & Integration',
+    summary: 'Connected systems for inspections, procurement, compliance, and progress tracking across existing tools.',
+    outcomes: ['Less duplicate capture', 'Lower admin load', 'More reliable reporting']
   },
   {
-    title: 'System Integration',
-    summary:
-      'Integration of legacy and modern tools using APIs and event-driven architecture with minimal disruption.',
-    outcomes: ['Connected systems', 'Less duplicate entry', 'Improved reliability']
+    title: 'Data Foundations for ConTech',
+    summary: 'Data models, APIs, and reporting layers engineered for construction teams dealing with fragmented information.',
+    outcomes: ['Consistent project data', 'Audit-ready records', 'Decision-grade dashboards']
   },
   {
-    title: 'Cloud & Platform Engineering',
-    summary:
-      'Deployment architecture, performance optimization, and monitoring for scalable production systems.',
-    outcomes: ['High uptime', 'Predictable scaling', 'Operational resilience']
+    title: 'Software Audits & Modernization',
+    summary: 'Technical reviews of existing software, websites, and internal tools with a roadmap for performance and security upgrades.',
+    outcomes: ['Prioritized fixes', 'Reduced technical debt', 'Clear modernization path']
   },
   {
-    title: 'Modernization & Support',
-    summary:
-      'Codebase audits, performance improvements, and long-term engineering support for existing products.',
-    outcomes: ['Lower technical debt', 'Stronger security posture', 'Sustained delivery']
-  },
-  {
-    title: 'Software & Website Auditing',
-    summary:
-      'Technical audits for websites and software platforms covering performance, security, accessibility, and maintainability.',
-    outcomes: ['Actionable audit report', 'Prioritized fixes', 'Clear improvement roadmap']
+    title: 'Fractional Product & Technical Advisory',
+    summary: 'Ongoing consulting for firms defining their software roadmap, digital twin strategy, or internal delivery model.',
+    outcomes: ['Stronger planning discipline', 'Sharper technical choices', 'Faster execution alignment']
   }
 ]
 
 const deliveryModel = [
   {
-    title: 'Discover',
-    text: 'We map your goals, constraints, and current systems to define the right technical path.'
+    title: 'Survey Reality',
+    text: 'We start from the jobsite, current workflows, and asset constraints rather than abstract software assumptions.'
   },
   {
-    title: 'Build',
-    text: 'Our team designs, develops, and ships production-ready software with quality gates built in.'
+    title: 'Engineer The System',
+    text: 'We design the data model, platform architecture, and operator workflows needed to support field execution.'
   },
   {
-    title: 'Scale',
-    text: 'We monitor, optimize, and iterate so your platform grows with your business needs.'
+    title: 'Operate With Confidence',
+    text: 'We launch with reporting, monitoring, and iteration loops so the software becomes part of daily site operations.'
   }
 ]
 
-const projects = [
+const twinMetrics = [
+  { label: 'Live packages tracked', value: '148', detail: 'RFIs, inspections, and deliveries in one operating view.' },
+  { label: 'Critical risk alerts', value: '06', detail: 'Blocked approvals, delayed deliveries, and high-risk dependencies.' },
+  { label: 'Field reporting lag', value: '-42%', detail: 'Reduction in manual reporting time after workflow consolidation.' }
+]
+
+const fieldProof = [
   {
-    name: 'Brick Renovations',
-    type: 'Public Project',
-    summary:
-      'Construction company website focused on showcasing renovation services, trust signals, and lead capture.',
-    stack: ['Responsive website', 'Service pages', 'Contact conversion flow'],
-    caseStudyId: 'case-brick-renovations',
-    liveUrl: 'https://brickand.co.za'
+    title: 'Brick Renovations',
+    summary: 'A live construction business presence that grounds our consulting work in the commercial reality of project delivery.',
+    image: AetherVisuals,
+    alt: 'Finished construction project photography for Brick Renovations',
+    cta: 'Visit Construction Company',
+    href: 'https://brickand.co.za'
   },
   {
-    name: 'Aether Dispatch Hub',
-    type: 'Private Internal Project',
-    summary:
-      'A logistics operations platform for a transport company managing dispatch planning, fleet visibility, and delivery exception handling.',
-    stack: ['Operations dashboard', 'Workflow automation', 'Role-based access'],
-    caseStudyId: 'case-dispatch-hub'
-  },
-  {
-    name: 'MedFlow Patient Portal',
-    type: 'Private Internal Project',
-    summary:
-      'A healthcare portal belonging to a medical practice for appointments, records access, and communication between care teams and patients.',
-    stack: ['Patient portal', 'Appointment workflows', 'Secure communication'],
-    caseStudyId: 'case-medflow-portal'
+    title: 'Site Command Dashboard',
+    summary: 'The software side of the same story: dashboards, role-based workflows, and real-time project controls built for the field.',
+    image: AetherIalVisual,
+    alt: 'Construction software dashboard and platform concept',
+    cta: 'View Delivery Approach',
+    href: '#twin-showcase'
   }
 ]
 
-const visuals = [
-  {
-    image: CampaignPoster,
-    title: 'Digital Future Campaign',
-    text: 'Brand-led campaign visual focused on product vision, software delivery, and cross-device design.',
-    alt: 'Aether Systems campaign poster showing vision, business, and experience themes'
-  },
+const visualShowcase = [
   {
     image: ConceptToCodeVisual,
-    title: 'Concept-to-Launch Storyboard',
-    text: 'A four-part creative that communicates the journey from product ideation to business launch.',
-    alt: 'Aether Systems concept to code marketing visual showing ideation, development, multi-platform, and launch'
-  },
-  {
-    image: AetherIalVisual,
-    title: 'Aether-IAL Product Mockup',
-    text: 'Multi-device product preview centered on Aether Architect, Ascent, and Cognition service offerings.',
-    alt: 'Aether Systems multi-device product mockup with Aether Architect, Ascent, and Cognition'
+    title: 'Concept To Command Layer',
+    text: 'A planning-to-deployment visual language for software that sits close to site execution.',
+    alt: 'Concept to launch software visual for contech systems'
   },
   {
     image: ServicePillarsVisual,
-    title: 'Service Pillars Overview',
-    text: 'A service matrix visual highlighting custom software, app development, cloud, AI integration, and modernization.',
-    alt: 'Aether Systems service pillars visual for software development and modernization'
+    title: 'ConTech Capability Matrix',
+    text: 'Software architecture, cloud delivery, automation, and modernization aligned to construction operators.',
+    alt: 'ConTech service pillars and software capability visual'
+  },
+  {
+    image: CampaignPoster,
+    title: 'Data-Driven Project Delivery',
+    text: 'Brand direction for a consultancy that treats operational data as a core project asset.',
+    alt: 'Campaign poster focused on digital delivery and software systems'
   }
 ]
 
-const caseStudies = [
+const techBadges = [
+  'Python',
+  'React',
+  'Three.js',
+  'Node APIs',
+  'PostgreSQL',
+  'Power BI',
+  'GIS Data',
+  'Site QA Workflows',
+  'Compliance Tracking',
+  'Construction Delivery Insight'
+]
+
+const sectors = [
+  'General Contractors',
+  'Specialist Trades',
+  'Property Developers',
+  'Project Management Teams',
+  'Asset Owners',
+  'Construction Operations Leaders'
+]
+
+const engagements = [
   {
-    id: 'case-brick-renovations',
-    title: 'Brick Renovations',
-    type: 'Public Project',
-    challenge:
-      'Brick Renovations needed a stronger digital presence to present services clearly and turn website visits into qualified enquiries.',
-    approach:
-      'We structured the site around core renovation services, added clear trust-building content blocks, and streamlined enquiry CTAs across the full browsing journey.',
-    impact:
-      'The final structure is easier to navigate, communicates credibility faster, and supports better lead generation for the business.',
-    liveUrl: 'https://brickand.co.za'
+    image: CampaignPoster,
+    alt: 'Consulting discovery sprint visual',
+    name: 'ConTech Discovery Sprint',
+    price: 'From R7 500',
+    label: 'Fast strategic assessment',
+    features: ['Workflow and tool audit', 'Risk and bottleneck review', 'Priority roadmap', 'Executive debrief']
   },
   {
-    id: 'case-dispatch-hub',
-    title: 'Aether Dispatch Hub',
-    type: 'Private Internal Project',
-    challenge:
-      'Dispatch teams often lose time switching between spreadsheets, calls, and disconnected tracking tools.',
-    approach:
-      'We implemented an internal operations portal that consolidates route assignment, driver status, and delivery alerts into one control surface with prioritized workflows.',
-    impact:
-      'The company gained faster dispatch decisions, reduced coordination overhead, and clearer accountability per route.'
+    image: ConceptToCodeVisual,
+    alt: 'Digital twin pilot consulting visual',
+    name: 'Digital Twin Pilot',
+    price: 'From R18 000',
+    label: 'Proof-of-value engagement',
+    features: ['Pilot dashboard design', 'Data model and feed mapping', 'Field reporting workflow', 'Pilot success metrics']
   },
   {
-    id: 'case-medflow-portal',
-    title: 'MedFlow Patient Portal',
-    type: 'Private Internal Project',
-    challenge:
-      'Patients and care staff needed a single digital path for booking, updates, and records without fragmented communication channels.',
-    approach:
-      'We designed an accessible portal flow for appointment booking, secure messaging, and patient record visibility with clear user states.',
-    impact:
-      'The internal platform improved digital service quality while reducing front-desk load and communication delays.'
+    image: ServicePillarsVisual,
+    alt: 'Operations platform build consulting visual',
+    name: 'Operations Platform Buildout',
+    price: 'Custom quote',
+    label: 'Full implementation program',
+    features: ['Platform architecture', 'Integration delivery', 'Role-based workflows', 'Launch and iteration support']
   }
 ]
 
-const sectors = ['Government & Public Services', 'Financial Services', 'Healthcare & HealthTech', 'Commerce & Retail', 'Education Platforms', 'Logistics & Utilities']
+const pricingFactors = [
+  'Number of sites, teams, and operational workflows involved.',
+  'Complexity of data sources, integrations, and asset models.',
+  'Level of dashboarding, automation, and reporting required.',
+  'Need for advisory, implementation, or long-term support.'
+]
 
-const quickLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#process', label: 'Process' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#visuals', label: 'Visuals' },
-  { href: '#industries', label: 'Industries' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#contact', label: 'Contact' }
+const terminalFeed = [
+  '> sync site telemetry --region gauteng',
+  '[ok] crane status received: 4/4 online',
+  '[ok] delivery queue reconciled: 18 inbound loads',
+  '[warn] inspection backlog: concrete pour area C',
+  '[ok] dashboard snapshot published to project leads'
 ]
 
 function App() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
-  const [pricingPaused, setPricingPaused] = useState(false)
 
   const handleNavLinkClick = () => {
     setMobileNavOpen(false)
   }
-
-  const websitePackages = [
-    {
-      image: SimpleWeb,
-      alt: 'Simple website package preview',
-      name: 'Basic Static',
-      price: 'From R2000',
-      features: ['Single-page layout', 'Mobile responsive design', 'Contact form setup', '1 revision cycle']
-    },
-    {
-      image: AdvancedWeb,
-      alt: 'Advanced website package preview',
-      name: 'Advanced',
-      price: 'From R3500',
-      features: ['Up to 5 pages', 'Custom UI sections', 'SEO-ready structure', '2 revision cycles']
-    },
-    {
-      image: ProWeb,
-      alt: 'Pro website package preview',
-      name: 'Pro',
-      price: 'From R5000',
-      features: ['Multi-page site', 'Animations and interactions', 'Copy and content guidance', 'Priority support']
-    }
-  ]
-
-  const ecommercePackages = [
-    {
-      image: SimpleStore,
-      alt: 'Simple ecommerce package preview',
-      name: 'Basic',
-      price: 'From R3000',
-      features: ['Starter storefront', 'Product listing setup', 'Payment gateway setup', 'Basic analytics']
-    },
-    {
-      image: AdvancedStore,
-      alt: 'Advanced ecommerce package preview',
-      name: 'Advanced',
-      price: 'From R5000',
-      features: ['Up to 50 products', 'Custom product pages', 'Inventory tracking', '2 revision cycles']
-    },
-    {
-      image: ProStore,
-      alt: 'Pro ecommerce package preview',
-      name: 'Pro',
-      price: 'From R8000',
-      features: ['Full ecommerce build', 'Automation flows', 'Marketing integrations', 'Priority support']
-    }
-  ]
-
-  const pricingFactors = [
-    'Scope of required features, integrations, and data sources.',
-    'Complexity of automation, security, and compliance requirements.',
-    'Volume of content migration or system modernization.',
-    'Timeline expectations and level of ongoing support.'
-  ]
 
   return (
     <div className="app">
@@ -251,7 +182,7 @@ function App() {
         <div className="container header-inner">
           <a href="#home" className="brand" aria-label="Aether Systems home">
             <img src={Logo} className="brand-logo" alt="Aether Systems logo" />
-            <span>Aether Systems (Pty) Ltd </span>
+            <span>AETHER SYSTEMS</span>
           </a>
 
           <button
@@ -268,11 +199,10 @@ function App() {
 
           <nav id="primary-nav" className={`nav ${mobileNavOpen ? 'open' : ''}`} aria-label="Primary">
             <a href="#services" onClick={handleNavLinkClick}>Services</a>
-            <a href="#process" onClick={handleNavLinkClick}>Process</a>
-            <a href="#projects" onClick={handleNavLinkClick}>Projects</a>
+            <a href="#twin-showcase" onClick={handleNavLinkClick}>Digital Twin</a>
+            <a href="#field-proof" onClick={handleNavLinkClick}>Field Proof</a>
             <a href="#visuals" onClick={handleNavLinkClick}>Visuals</a>
-            <a href="#industries" onClick={handleNavLinkClick}>Industries</a>
-            <a href="#pricing" onClick={handleNavLinkClick}>Pricing</a>
+            <a href="#pricing" onClick={handleNavLinkClick}>Engagements</a>
             <a href="#contact" onClick={handleNavLinkClick}>Contact</a>
           </nav>
         </div>
@@ -281,28 +211,52 @@ function App() {
       <main id="main" tabIndex="-1">
         <section id="home" className="hero">
           <div className="container hero-grid">
-            <div>
-              <p className="eyebrow">Software Engineering Partner</p>
-              <h1>We build and scale websites and business platforms that drive operations.</h1>
+            <div className="hero-copy-column">
+              <p className="eyebrow">ConTech Software Consultancy</p>
+              <h1>Building the Future, Line by Line.</h1>
               <p className="hero-copy">
-                Aether Systems helps companies and institutions move from fragmented tools to cohesive,
-                production-grade software. We focus on outcomes: speed, reliability, and maintainable systems.
+                Custom software solutions engineered within the reality of the jobsite. Aether Systems helps construction and logistics
+                teams turn fragmented field activity into reliable digital operations, dashboards, and asset intelligence.
               </p>
               <div className="hero-cta-row">
-                <a className="btn btn-primary" href="#contact">Request a Project Call</a>
-                <a className="btn btn-secondary" href="#services">Explore Services</a>
+                <a className="btn btn-primary" href="#contact">Book a Discovery Call</a>
+                <a className="btn btn-secondary" href="#twin-showcase">See The Digital Twin View</a>
+              </div>
+
+              <div className="hero-terminal" aria-label="Mock live feed of site data">
+                <div className="terminal-head">
+                  <span className="terminal-dot" />
+                  <span className="terminal-dot" />
+                  <span className="terminal-dot" />
+                  <p>live-site-feed.log</p>
+                </div>
+                <div className="terminal-body">
+                  {terminalFeed.map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <aside className="hero-panel" aria-label="Delivery outcomes">
-              <img className="hero-panel-image" src={AetherVisuals} alt="Aether Systems visual showcase" />
-              <h2 className="hero-panel-title">What you can expect</h2>
-              <ul>
-                <li>Clear project scope and delivery milestones</li>
-                <li>Modern architecture built for growth</li>
-                <li>Security and quality from day one</li>
-                <li>Dedicated post-launch support</li>
-              </ul>
+            <aside className="hero-visual" aria-label="Construction digital twin illustration">
+              <div className="wireframe-stage">
+                <div className="wireframe-orbit orbit-one" />
+                <div className="wireframe-orbit orbit-two" />
+                <div className="wireframe-core">
+                  <div className="wireframe-tower tower-one" />
+                  <div className="wireframe-tower tower-two" />
+                  <div className="wireframe-tower tower-three" />
+                </div>
+              </div>
+              <div className="hero-visual-card">
+                <p className="hero-visual-kicker">Operational layer</p>
+                <h2>Software that understands physical work.</h2>
+                <ul>
+                  <li>Site dashboards linked to real workflows</li>
+                  <li>Data models built around projects and assets</li>
+                  <li>Delivery planning grounded in field constraints</li>
+                </ul>
+              </div>
             </aside>
           </div>
         </section>
@@ -310,12 +264,12 @@ function App() {
         <section id="services" className="services section">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">Our Services</p>
-              <h2>End-to-end development services centered on business impact</h2>
+              <p className="eyebrow">Services</p>
+              <h2>Software consulting for construction teams that need more than a generic dev shop</h2>
             </div>
 
             <div className="services-grid">
-              {services.map((service) => (
+              {serviceAreas.map((service) => (
                 <article key={service.title} className="service-card">
                   <h3>{service.title}</h3>
                   <p>{service.summary}</p>
@@ -333,8 +287,8 @@ function App() {
         <section id="process" className="process section">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">How We Work</p>
-              <h2>A practical delivery model that keeps projects moving</h2>
+              <p className="eyebrow">Approach</p>
+              <h2>We start from field reality, then engineer the software around it</h2>
             </div>
 
             <div className="process-grid">
@@ -348,31 +302,54 @@ function App() {
           </div>
         </section>
 
-        <section id="projects" className="projects section">
-          <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Projects</p>
-              <h2>Selected delivered projects</h2>
+        <section id="twin-showcase" className="twin-showcase section">
+          <div className="container twin-grid">
+            <div className="section-head twin-head">
+              <p className="eyebrow">Digital Twin Showcase</p>
+              <h2>A dashboard-style operating picture for projects, assets, and site decisions</h2>
+              <p>
+                The point is not flashy software. The point is to give project leaders one place to see what is moving,
+                what is blocked, and what needs intervention next.
+              </p>
             </div>
 
-            <div className="projects-grid">
-              {projects.map((project) => (
-                <article key={project.name} className="project-card">
-                  <p className="project-type">{project.type}</p>
-                  <h3>{project.name}</h3>
-                  <p>{project.summary}</p>
-                  <ul>
-                    {project.stack.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                  <div className="project-actions">
-                    <a className="btn btn-primary" href={`#${project.caseStudyId}`}>View Case Study</a>
-                    {project.liveUrl && (
-                      <a className="btn btn-secondary" href={project.liveUrl} target="_blank" rel="noreferrer">
-                        Visit Live Site
-                      </a>
-                    )}
+            <div className="twin-panel">
+              <div className="twin-map">
+                <div className="twin-node node-a">Plant</div>
+                <div className="twin-node node-b">Stores</div>
+                <div className="twin-node node-c">Zone C</div>
+                <div className="twin-node node-d">QA</div>
+              </div>
+              <div className="twin-metrics">
+                {twinMetrics.map((metric) => (
+                  <article key={metric.label} className="metric-card">
+                    <p className="metric-label">{metric.label}</p>
+                    <p className="metric-value">{metric.value}</p>
+                    <p className="metric-detail">{metric.detail}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="field-proof" className="field-proof section">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Proven In The Field</p>
+              <h2>Real construction context on one side, software execution on the other</h2>
+            </div>
+
+            <div className="field-proof-grid">
+              {fieldProof.map((item) => (
+                <article key={item.title} className="proof-card">
+                  <img src={item.image} alt={item.alt} loading="lazy" />
+                  <div className="proof-copy">
+                    <h3>{item.title}</h3>
+                    <p>{item.summary}</p>
+                    <a className="proof-link" href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noreferrer' : undefined}>
+                      {item.cta}
+                    </a>
                   </div>
                 </article>
               ))}
@@ -380,19 +357,23 @@ function App() {
           </div>
         </section>
 
+        <section className="badge-bar" aria-label="Technology and field credibility">
+          <div className="container badge-track">
+            {techBadges.map((badge) => (
+              <span key={badge} className="tech-badge">{badge}</span>
+            ))}
+          </div>
+        </section>
+
         <section id="visuals" className="visuals section">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">Brand Visuals</p>
-              <h2>Recent campaign and product visual concepts</h2>
-              <p>
-                Newly added creative assets used to communicate Aether Systems positioning,
-                delivery capabilities, and product direction.
-              </p>
+              <p className="eyebrow">Visual Direction</p>
+              <h2>Creative system for digital twin storytelling, dashboards, and software delivery</h2>
             </div>
 
             <div className="visuals-grid">
-              {visuals.map((item) => (
+              {visualShowcase.map((item) => (
                 <figure key={item.title} className="visual-card">
                   <img src={item.image} alt={item.alt} loading="lazy" />
                   <figcaption>
@@ -405,49 +386,11 @@ function App() {
           </div>
         </section>
 
-        <section id="case-studies" className="case-studies section">
-          <div className="container">
-            <div className="section-head">
-              <p className="eyebrow">Case Studies</p>
-              <h2>Project breakdowns and delivery outcomes</h2>
-              <p>Two projects are private internal systems and are shared here without client-identifying details.</p>
-            </div>
-
-            <div className="case-study-list">
-              {caseStudies.map((study) => (
-                <article id={study.id} key={study.id} className="case-study-card">
-                  <p className="project-type">{study.type}</p>
-                  <h3>{study.title}</h3>
-                  <div className="case-study-grid">
-                    <div>
-                      <h4>Challenge</h4>
-                      <p>{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4>Approach</h4>
-                      <p>{study.approach}</p>
-                    </div>
-                    <div>
-                      <h4>Impact</h4>
-                      <p>{study.impact}</p>
-                    </div>
-                  </div>
-                  {study.liveUrl && (
-                    <a className="case-study-link" href={study.liveUrl} target="_blank" rel="noreferrer">
-                      Open {study.title}
-                    </a>
-                  )}
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="industries" className="industries section">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">Industries</p>
-              <h2>Teams we commonly support</h2>
+              <p className="eyebrow">Who We Support</p>
+              <h2>Construction-focused teams that need software to work in the real world</h2>
             </div>
 
             <div className="sector-grid">
@@ -461,64 +404,41 @@ function App() {
         <section id="pricing" className="pricing section">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">Pricing</p>
-              <h2>Website design, ecommerce, and flexible service pricing</h2>
-              <p className="section-note">View the prices and choose the best suitable for your business.</p>
+              <p className="eyebrow">Engagement Models</p>
+              <h2>Consulting-led pricing built around software outcomes, not brochure websites</h2>
+              <p className="section-note">
+                We scope around operational complexity, data maturity, and delivery ambition. The images lead each engagement card, with the offer details below.
+              </p>
             </div>
 
-            <div className={`pricing-track ${pricingPaused ? 'paused' : ''}`} onClick={() => setPricingPaused((prev) => !prev)}>
-              <div className="pricing-track-inner">
-                {websitePackages.map((tier) => (
-                  <article key={tier.name} className="pricing-card">
-                    <img className="pricing-image" src={tier.image} alt={tier.alt} loading="lazy" />
+            <div className="pricing-grid">
+              {engagements.map((tier) => (
+                <article key={tier.name} className="pricing-card">
+                  <img className="pricing-image" src={tier.image} alt={tier.alt} loading="lazy" />
+                  <div className="pricing-copy-block">
                     <h3>{tier.name}</h3>
                     <p className="pricing-price">{tier.price}</p>
-                    <p className="pricing-label">Website Design Package</p>
+                    <p className="pricing-label">{tier.label}</p>
                     <ul>
                       {tier.features.map((feature) => (
                         <li key={feature}>{feature}</li>
                       ))}
                     </ul>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className={`pricing-track ${pricingPaused ? 'paused' : ''}`} onClick={() => setPricingPaused((prev) => !prev)}>
-              <div className="pricing-track-inner">
-                {ecommercePackages.map((tier) => (
-                  <article key={tier.name} className="pricing-card">
-                    <img className="pricing-image" src={tier.image} alt={tier.alt} loading="lazy" />
-                    <h3>{tier.name}</h3>
-                    <p className="pricing-price">{tier.price}</p>
-                    <p className="pricing-label">Ecommerce Package</p>
-                    <ul>
-                      {tier.features.map((feature) => (
-                        <li key={feature}>{feature}</li>
-                      ))}
-                    </ul>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className={`pricing-track pricing-track--static ${pricingPaused ? 'paused' : ''}`} onClick={() => setPricingPaused((prev) => !prev)}>
-              <div className="pricing-track-inner">
-                <article className="pricing-card pricing-card--wide">
-                  <img className="pricing-image" src={ProWeb} alt="Other services pricing discovery preview" loading="lazy" />
-                  <h3>Other Services</h3>
-                  <p className="pricing-price">Custom pricing</p>
-                  <p className="pricing-label">Scope-based engagements</p>
-                  <p className="pricing-copy">
-                    Some services do not fit fixed packages. Pricing is determined after a discovery call and a short technical review.
-                  </p>
-                  <ul>
-                    {pricingFactors.map((factor) => (
-                      <li key={factor}>{factor}</li>
-                    ))}
-                  </ul>
+                  </div>
                 </article>
-              </div>
+              ))}
+            </div>
+
+            <div className="pricing-note-card">
+              <h3>How custom pricing is determined</h3>
+              <p>
+                Larger ConTech engagements are quoted after a discovery session, workflow review, and data architecture check. We price based on delivery responsibility, not just dev hours.
+              </p>
+              <ul>
+                {pricingFactors.map((factor) => (
+                  <li key={factor}>{factor}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -526,36 +446,51 @@ function App() {
         <section id="contact" className="contact section">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">Start a Project</p>
-              <h2>Tell us what you need and we will respond within one business day</h2>
+              <p className="eyebrow">Start A Conversation</p>
+              <h2>Tell us where your construction workflows, data, or software stack are slowing you down</h2>
+              <p className="section-note">
+                Share the current setup, the operational pain point, and what success looks like. We’ll shape the next step around your real delivery context.
+              </p>
             </div>
 
             <div className="contact-layout">
-              <div className="contact-info-column">
-                <div className="contact-info">
-                  <div className="contact-item">
-                    <h3>Email</h3>
-                    <p>info@aethersystems.co.za</p>
-                  </div>
-                  <div className="contact-item">
-                    <h3>Availability</h3>
-                    <p>Remote-first team serving organizations globally</p>
-                  </div>
-                </div>
-                <div className="engagement-statement">
+              <div className="contact-rail">
+                <article className="contact-card contact-intro-card">
+                  <p className="contact-card-kicker">Before you reach out</p>
+                  <h3>Give us the operational context, not just a contact request.</h3>
                   <p>
-                    Best for teams that need a reliable engineering partner to build websites, internal systems,
-                    and long-term digital platforms.
+                    The best conversations start with a real workflow problem. Tell us what is breaking down, what tools are already in play,
+                    and where you want the system to end up.
                   </p>
-                </div>
-                <div className="quick-links">
-                  <h3>Quick Links</h3>
-                  <div className="quick-links-grid">
-                    {quickLinks.map((link) => (
-                      <a key={link.href} href={link.href}>{link.label}</a>
-                    ))}
+
+                  <div className="contact-pills" aria-label="Typical engagement types">
+                    <span>Workflow audit</span>
+                    <span>Platform build</span>
+                    <span>Digital twin</span>
+                    <span>Advisory support</span>
                   </div>
+                </article>
+
+                <div className="contact-mini-grid">
+                  <article className="contact-card contact-mini-card">
+                    <p className="contact-mini-label">Email</p>
+                    <h3>info@aethersystems.co.za</h3>
+                    <p>For project enquiries, introductions, and discovery conversations.</p>
+                  </article>
+                  <article className="contact-card contact-mini-card">
+                    <p className="contact-mini-label">Focus</p>
+                    <h3>ConTech systems</h3>
+                    <p>Software strategy, operational dashboards, and digital twin delivery.</p>
+                  </article>
                 </div>
+
+                <article className="contact-card contact-note-card">
+                  <h3>Best fit</h3>
+                  <p>
+                    Best for teams that need software strategy, field-aware platforms, operational dashboards,
+                    or a practical roadmap for construction technology adoption.
+                  </p>
+                </article>
               </div>
 
               <div className="contact-form-column">
@@ -568,11 +503,11 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2026 Aether Systems. All rights reserved.</p>
+          <p>&copy; 2026 Aether Systems. ConTech software consulting for teams building in the real world.</p>
         </div>
       </footer>
 
-      <Chatbot whatsappNumber="+2788146767" />
+      <Chatbot whatsappNumber="+27736665476" />
     </div>
   )
 }
