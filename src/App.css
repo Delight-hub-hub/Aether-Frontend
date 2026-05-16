@@ -201,10 +201,51 @@ textarea:focus-visible {
 
 .hero-copy-column h1 {
   margin: 0;
-  max-width: 10ch;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.08em;
+  max-width: 100%;
+  font-size: clamp(2.0rem, 5vw, 5rem);
   line-height: 0.95;
   letter-spacing: -0.07em;
+}
+
+.hero-title-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(0.65em);
+  filter: blur(10px);
+  animation: heroTitleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.hero-title-line--primary {
+  color: #fff;
+  animation-delay: 80ms;
+}
+
+.hero-title-line--secondary {
+  position: relative;
+  color: transparent;
+  background: linear-gradient(90deg, var(--brand) 0%, #ffe0b3 48%, var(--brand-strong) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation-delay: 240ms;
+}
+
+.hero-title-line--secondary::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.08em;
+  height: 0.14em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 140, 0, 0.12), rgba(255, 173, 51, 0.95), rgba(255, 140, 0, 0.12));
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: heroUnderline 0.9s ease forwards 900ms;
 }
 
 .hero-copy {
@@ -1150,6 +1191,28 @@ textarea:focus-visible {
   }
   50% {
     transform: skewY(-8deg) translateY(-10px);
+  }
+}
+
+@keyframes heroTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(0.65em);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroUnderline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 

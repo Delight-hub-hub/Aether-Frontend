@@ -212,10 +212,13 @@ function App() {
         <section id="home" className="hero">
           <div className="container hero-grid">
             <div className="hero-copy-column">
-              <p className="eyebrow">ConTech Software Consultancy</p>
-              <h1>Building the Future, Line by Line.</h1>
+              <p className="eyebrow">indTech Software Consultancy</p>
+              <h1 className="hero-title">
+                <span className="hero-title-line hero-title-line--primary">Smarter Software,</span>
+                <span className="hero-title-line hero-title-line--secondary">for complex operations.</span>
+              </h1>
               <p className="hero-copy">
-                Custom software solutions engineered within the reality of the jobsite. Aether Systems helps construction and logistics
+                Custom software solutions engineered within the reality of the jobsite. Aether Systems helps industries and logistics
                 teams turn fragmented field activity into reliable digital operations, dashboards, and asset intelligence.
               </p>
               <div className="hero-cta-row">
