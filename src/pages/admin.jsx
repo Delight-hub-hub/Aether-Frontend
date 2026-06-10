@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
+import { getApiBase } from "../lib/api";
 
 export default function Admin() {
   const [clients, setClients] = useState([]);
+  const apiBase = getApiBase();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/clients")
+    fetch(`${apiBase}/api/clients`)
       .then(res => res.json())
       .then(data => setClients(data))
       .catch(err => console.error(err));
-  }, []);
+  }, [apiBase]);
 
   return (
     <div>

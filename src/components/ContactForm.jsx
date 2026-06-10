@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getApiBase } from '../lib/api'
 
 const initialFormData = {
   name: '',
@@ -8,20 +9,20 @@ const initialFormData = {
 }
 
 export default function ContactForm({
-  eyebrow = 'Demo request',
-  title = 'Tell us what you want to see',
-  description = 'Share the portfolio, property, or workflow you want to modernize and we will tailor the walkthrough.',
-  submitLabel = 'Request demo',
+  eyebrow = 'Consultation',
+  title = 'Tell us what you want to solve',
+  description = 'Share the workflow, product idea, or operational challenge you want to improve and we will tailor the conversation.',
+  submitLabel = 'Send inquiry',
   note = 'We usually reply within one business day.',
   idPrefix = 'contact',
   compact = false,
   className = '',
-  messagePlaceholder = 'Tell us about your team, current tools, and what success looks like.',
+  messagePlaceholder = 'Describe your business challenge, current tools, and the outcome you want to achieve.',
 }) {
   const [formData, setFormData] = useState(initialFormData)
   const [status, setStatus] = useState({ type: 'idle', message: '' })
   const isSubmitting = status.type === 'submitting'
-  const apiBase = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/$/, '')
+  const apiBase = getApiBase()
 
   const handleChange = (e) => {
     const { name, value } = e.target

@@ -6,166 +6,220 @@ import ContactForm from './components/ContactForm'
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'solutions', label: 'Solutions' },
-  { id: 'product', label: 'Aether Property' },
+  { id: 'services', label: 'Services' },
+  { id: 'industries', label: 'Industries' },
+  { id: 'showcase', label: 'Solutions' },
   { id: 'contact', label: 'Contact' },
 ]
 
 const heroHighlights = [
   {
-    value: 'Property-first',
-    label: 'Leases, units, maintenance, and reporting in one operating system',
+    value: 'Cross-industry',
+    label: 'Built for construction, retail, logistics, services, and startups.',
   },
   {
-    value: 'Board-ready',
-    label: 'Executive dashboards designed for clear decisions and fast action',
+    value: 'Automation first',
+    label: 'Streamline manual workflows with connected software and integrations.',
   },
   {
-    value: 'Africa-ready',
-    label: 'Built for multi-site operations and growing enterprise teams',
+    value: 'Scalable delivery',
+    label: 'Designed for websites, systems, SaaS products, and long-term growth.',
   },
 ]
 
 const aboutCards = [
   {
-    title: 'A clear mission',
-    text: 'Digitizing property, construction, and operational management across Africa.',
+    title: 'Technology partner',
+    text: 'Aether Systems helps organizations modernize operations with software engineering, automation, and digital products.',
   },
   {
-    title: 'Enterprise focus',
-    text: 'Secure workflows, role-based access, and reliable reporting for complex organizations.',
+    title: 'Business outcomes',
+    text: 'Every engagement is shaped around efficiency, visibility, customer experience, and measurable return.',
   },
   {
-    title: 'Product-led delivery',
-    text: 'Strategy, implementation, and support aligned around outcomes, not just features.',
-  },
-]
-
-const leadership = [
-  {
-    role: 'Product strategy',
-    text: 'Roadmaps shaped around customer operations, adoption, and measurable value.',
-  },
-  {
-    role: 'Implementation',
-    text: 'Structured rollout support for live property and construction environments.',
-  },
-  {
-    role: 'Client success',
-    text: 'Responsive support for teams managing real assets, real people, and real deadlines.',
+    title: 'Long-term delivery',
+    text: 'We plan for maintainable systems, safe integrations, and roadmaps that can grow with the business.',
   },
 ]
 
-const solutions = [
+const deliveryApproach = [
   {
-    title: 'Property management software',
-    description:
-      'Aether Property helps operators manage units, tenants, maintenance, and reporting from one secure platform.',
-    bullets: ['Lease and unit tracking', 'Maintenance workflows', 'Executive dashboards'],
+    role: 'Discovery and strategy',
+    text: 'We align on goals, users, workflows, and the business case before writing a line of code.',
   },
   {
-    title: 'Construction operations',
-    description:
-      'Coordinate active sites with approvals, progress updates, and issue tracking connected to the real work on the ground.',
-    bullets: ['Site visibility', 'Approvals and handovers', 'Risk escalation'],
+    role: 'Design and engineering',
+    text: 'We build secure, polished experiences and scalable software architecture that supports real operations.',
   },
   {
-    title: 'Digital transformation',
-    description:
-      'Modernize disconnected spreadsheets and legacy systems with clean data models and rollout plans.',
-    bullets: ['Workflow audit', 'System design', 'Adoption roadmap'],
-  },
-  {
-    title: 'Integration and data',
-    description:
-      'Bring finance, reporting, field operations, and third-party systems into one operating picture.',
-    bullets: ['API sync', 'BI-ready structures', 'Audit trails'],
-  },
-  {
-    title: 'Analytics and reporting',
-    description:
-      'Give leadership a boardroom view of performance, occupancy, progress, and exception management.',
-    bullets: ['Live KPIs', 'Portfolio insights', 'Downloadable reports'],
-  },
-  {
-    title: 'Future products',
-    description:
-      'Aether Systems is building a broader suite for property and infrastructure teams across Africa.',
-    bullets: ['Platform roadmap', 'Scalable modules', 'Long-term product vision'],
+    role: 'Support and evolution',
+    text: 'We stay involved after launch to refine features, extend integrations, and support future growth.',
   },
 ]
 
-const industries = ['Property Management', 'Real Estate', 'Construction', 'Government', 'Facilities', 'Infrastructure']
+const services = [
+  {
+    title: 'Website Design & Development',
+    description: 'Create credible, high-performing websites that support marketing, sales, and customer acquisition.',
+  },
+  {
+    title: 'Custom Software Development',
+    description: 'Build tailored systems that replace manual work and fit the way your teams actually operate.',
+  },
+  {
+    title: 'Business Process Automation',
+    description: 'Automate repetitive tasks and approvals to reduce delays, errors, and operating costs.',
+  },
+  {
+    title: 'API Integrations',
+    description: 'Connect internal tools and third-party platforms so data moves cleanly across your business.',
+  },
+  {
+    title: 'E-Commerce Applications',
+    description: 'Launch commerce experiences that improve conversion, streamline order handling, and scale with demand.',
+  },
+  {
+    title: 'SaaS Product Development',
+    description: 'Design subscription-ready products with the architecture, UX, and reliability modern software needs.',
+  },
+  {
+    title: 'Technical Consulting',
+    description: 'Guide strategy, architecture, and implementation decisions with practical advice rooted in delivery.',
+  },
+]
 
-const productFeatures = [
+const industries = [
+  'Construction',
+  'Property Management',
+  'Retail',
+  'E-Commerce',
+  'Professional Services',
+  'Logistics',
+  'Startups and SMEs',
+]
+
+const capabilityCards = [
   {
-    title: 'Portfolio control',
-    text: 'Centralize properties, units, tenants, and contracts in one operating system.',
+    title: 'Business Websites',
+    text: 'Fast, credible sites that support marketing, sales, and conversion.',
   },
   {
-    title: 'Maintenance command center',
-    text: 'Turn requests into assignable, trackable work with visibility for every team.',
+    title: 'Customer Portals',
+    text: 'Secure self-service experiences that reduce support load and improve response times.',
   },
   {
-    title: 'Operational reporting',
-    text: 'Keep leaders informed with live KPIs, trends, and exception alerts.',
+    title: 'Internal Business Systems',
+    text: 'Tools that give teams visibility, control, and less manual work.',
   },
   {
-    title: 'Role-based access',
-    text: 'Support executives, site teams, finance, and operations with the right permissions.',
+    title: 'E-Commerce Platforms',
+    text: 'Commerce experiences built to handle catalog, order, and fulfillment workflows.',
+  },
+  {
+    title: 'Automation Tools',
+    text: 'Workflow automation that reduces cycle time and human error.',
+  },
+  {
+    title: 'API-Driven Applications',
+    text: 'Connected software that moves data between products and services.',
+  },
+  {
+    title: 'SaaS Platforms',
+    text: 'Subscription products designed for maintainability, growth, and scale.',
   },
 ]
 
 const dashboards = [
   {
-    title: 'Portfolio Overview',
-    subtitle: 'Occupancy, arrears, and lease health',
+    title: 'Operations Overview',
+    subtitle: 'Revenue, delivery, and active workstreams',
     accent: '#2f7cf6',
-    sidebarItems: ['Overview', 'Units', 'Tenants', 'Collections', 'Reports'],
+    sidebarItems: ['Overview', 'Projects', 'Tasks', 'Finance', 'Reports'],
     stats: [
-      { label: 'Occupancy', value: '94%' },
-      { label: 'Open cases', value: '12' },
+      { label: 'Active accounts', value: '24' },
+      { label: 'Open requests', value: '12' },
       { label: 'Risk flag', value: 'Low' },
     ],
     chartBars: [48, 72, 56, 88, 64, 90],
     rows: [
-      ['Tower A', 'Occupied', 'Renewal due in 22 days'],
-      ['Site B', 'Review', 'Rent follow-up scheduled'],
-      ['Block C', 'Stable', 'No open exceptions'],
+      ['North Team', 'On track', 'Weekly review complete'],
+      ['Client 14', 'Review', 'Budget variance under check'],
+      ['Project 08', 'Stable', 'No blockers reported'],
     ],
   },
   {
-    title: 'Maintenance Command',
-    subtitle: 'Work orders, vendors, and SLA tracking',
+    title: 'Automation Command',
+    subtitle: 'Requests, tasks, and SLA tracking',
     accent: '#0f5bd7',
     sidebarItems: ['Queue', 'Vendors', 'Assets', 'Inspections', 'SLA'],
     stats: [
-      { label: 'Active jobs', value: '28' },
+      { label: 'Automations', value: '18' },
       { label: 'Due today', value: '9' },
-      { label: 'SLA met', value: '91%' },
+      { label: 'Success rate', value: '96%' },
     ],
     chartBars: [34, 42, 66, 60, 80, 74],
     rows: [
-      ['HVAC-14', 'Urgent', 'Assigned to vendor'],
-      ['Lighting-02', 'Open', 'Awaiting approval'],
-      ['Fire panel', 'In progress', 'Inspection booked'],
+      ['Support queue', 'Urgent', 'Assigned to owner'],
+      ['Approval flow', 'In progress', 'Waiting on sign-off'],
+      ['Invoice sync', 'Healthy', 'No action required'],
     ],
   },
   {
     title: 'Executive Reporting',
     subtitle: 'Board-level performance and trends',
     accent: '#184ea8',
-    sidebarItems: ['Summary', 'Projects', 'Budget', 'Escalations', 'Exports'],
+    sidebarItems: ['Summary', 'Programs', 'Budget', 'Escalations', 'Exports'],
     stats: [
-      { label: 'Projects live', value: '16' },
+      { label: 'Programs live', value: '16' },
       { label: 'Milestones', value: '83%' },
       { label: 'Alerts', value: '03' },
     ],
     chartBars: [20, 40, 65, 53, 78, 86],
     rows: [
-      ['Portfolio A', 'On track', 'Weekly review complete'],
-      ['Portfolio B', 'Watch', 'Budget variance under review'],
-      ['Portfolio C', 'Stable', 'No blockers reported'],
+      ['Division A', 'On track', 'Weekly review complete'],
+      ['Division B', 'Watch', 'Budget variance under review'],
+      ['Division C', 'Stable', 'No blockers reported'],
+    ],
+  },
+  {
+    title: 'E-Commerce Control',
+    subtitle: 'Revenue, orders, inventory, and fulfillment',
+    accent: '#0d74d1',
+    layout: 'commerce',
+    sidebarItems: ['Overview', 'Orders', 'Catalog', 'Inventory', 'Insights'],
+    stats: [
+      { label: 'Revenue overview', value: '$1.28M' },
+      { label: 'Orders dashboard', value: '4,260' },
+      { label: 'Conversion metrics', value: '3.9%' },
+      { label: 'Fulfillment status', value: '91%' },
+    ],
+    chartBars: [42, 55, 61, 58, 74, 88],
+    summary: 'Monthly revenue is up 18% with stronger conversion on mobile traffic and cleaner order flow.',
+    orders: [
+      { code: '#4821', route: 'North Hub', status: 'Paid', statusClass: 'paid' },
+      { code: '#4814', route: 'Central Store', status: 'Packing', statusClass: 'packing' },
+      { code: '#4799', route: 'Online Channel', status: 'Ready', statusClass: 'ready' },
+    ],
+    catalogRows: [
+      { name: 'Aurora Chair', detail: '215 active SKUs and best seller status', status: 'Top seller' },
+      { name: 'Nimbus Lamp', detail: '32 units remaining across two warehouses', status: 'Low stock' },
+      { name: 'Terra Desk', detail: '84 orders completed this month', status: 'Active' },
+    ],
+    inventoryItems: [
+      { label: 'Core range', value: 84 },
+      { label: 'Seasonal stock', value: 61 },
+      { label: 'Bundles', value: 47 },
+    ],
+    customerMetrics: [
+      { label: 'Repeat customers', value: '38%' },
+      { label: 'Average order value', value: '$72' },
+      { label: 'Cart recovery', value: '18%' },
+    ],
+    fulfillmentStages: [
+      { label: 'Paid', value: '118' },
+      { label: 'Packed', value: '94' },
+      { label: 'Shipped', value: '86' },
+      { label: 'Delivered', value: '79' },
     ],
   },
 ]
@@ -176,17 +230,17 @@ const contactCards = [
   {
     label: 'Email',
     value: 'info@aethersystems.co.za',
-    note: 'For demo requests and sales questions.',
+    note: 'For consultations, demos, and new project enquiries.',
   },
   {
     label: 'Response',
     value: 'Within 1 business day',
-    note: 'A product specialist will follow up.',
+    note: 'A member of the team will follow up with the next step.',
   },
   {
-    label: 'Region',
-    value: 'Across Africa',
-    note: 'Built for multi-site, multi-team operations.',
+    label: 'Coverage',
+    value: 'Across industries',
+    note: 'Construction, retail, logistics, services, and startups.',
   },
 ]
 
@@ -200,9 +254,24 @@ function SectionHeading({ eyebrow, title, copy }) {
   )
 }
 
-function DashboardMockup({ title, subtitle, accent, sidebarItems, stats, chartBars, rows }) {
+function DashboardMockup({
+  title,
+  subtitle,
+  accent,
+  sidebarItems,
+  stats = [],
+  chartBars = [],
+  rows = [],
+  layout = 'standard',
+  summary = '',
+  orders = [],
+  catalogRows = [],
+  inventoryItems = [],
+  customerMetrics = [],
+  fulfillmentStages = [],
+}) {
   return (
-    <article className="dashboard-shot" style={{ '--shot-accent': accent }}>
+    <article className={`dashboard-shot ${layout === 'commerce' ? 'dashboard-shot--commerce' : ''}`} style={{ '--shot-accent': accent }}>
       <div className="dashboard-window">
         <div className="dashboard-window__topbar">
           <div className="window-dots" aria-hidden="true">
@@ -216,7 +285,7 @@ function DashboardMockup({ title, subtitle, accent, sidebarItems, stats, chartBa
           </div>
         </div>
 
-        <div className="dashboard-window__body">
+        <div className={`dashboard-window__body ${layout === 'commerce' ? 'dashboard-window__body--commerce' : ''}`}>
           <aside className="dashboard-sidebar" aria-label={`${title} navigation`}>
             {sidebarItems.map((item, index) => (
               <span key={item} className={`dashboard-sidebar__item ${index === 0 ? 'is-active' : ''}`}>
@@ -225,8 +294,8 @@ function DashboardMockup({ title, subtitle, accent, sidebarItems, stats, chartBa
             ))}
           </aside>
 
-          <div className="dashboard-content">
-            <div className="dashboard-stat-grid">
+          <div className={`dashboard-content ${layout === 'commerce' ? 'dashboard-content--commerce' : ''}`}>
+            <div className={`dashboard-stat-grid ${layout === 'commerce' ? 'dashboard-stat-grid--commerce' : ''}`}>
               {stats.map((stat) => (
                 <div key={stat.label} className="dashboard-stat-card">
                   <span>{stat.label}</span>
@@ -235,30 +304,138 @@ function DashboardMockup({ title, subtitle, accent, sidebarItems, stats, chartBa
               ))}
             </div>
 
-            <div className="dashboard-chart-card">
-              <div className="dashboard-chart-head">
-                <span>Weekly activity</span>
-                <strong>Live data</strong>
-              </div>
-              <div className="dashboard-bars" aria-hidden="true">
-                {chartBars.map((height, index) => (
-                  <div key={`${title}-${index}`} className="dashboard-bar-wrap">
-                    <span className="dashboard-bar" style={{ height: `${height}%` }} />
-                    <small>W{index + 1}</small>
+            {layout === 'commerce' ? (
+              <div className="commerce-grid">
+                <section className="commerce-card commerce-card--revenue">
+                  <div className="dashboard-chart-head">
+                    <span>Revenue Overview</span>
+                    <strong>Sales Trends</strong>
                   </div>
-                ))}
-              </div>
-            </div>
+                  <p className="commerce-summary">{summary}</p>
+                  <div className="commerce-revenue-summary">
+                    <div>
+                      <span>Monthly revenue</span>
+                      <strong>{stats[0]?.value}</strong>
+                    </div>
+                    <div>
+                      <span>Conversion metrics</span>
+                      <strong>{stats[2]?.value}</strong>
+                    </div>
+                    <div>
+                      <span>Growth</span>
+                      <strong>+18%</strong>
+                    </div>
+                  </div>
+                  <div className="dashboard-bars dashboard-bars--compact" aria-hidden="true">
+                    {chartBars.map((height, index) => (
+                      <div key={`${title}-${index}`} className="dashboard-bar-wrap">
+                        <span className="dashboard-bar" style={{ height: `${height}%` }} />
+                        <small>M{index + 1}</small>
+                      </div>
+                    ))}
+                  </div>
+                </section>
 
-            <div className="dashboard-table" role="presentation">
-              {rows.map((row) => (
-                <div key={row[0]} className="dashboard-table__row">
-                  <span>{row[0]}</span>
-                  <span>{row[1]}</span>
-                  <span>{row[2]}</span>
+                <section className="commerce-card commerce-card--orders">
+                  <div className="dashboard-chart-head">
+                    <span>Orders Dashboard</span>
+                    <strong>Fulfillment</strong>
+                  </div>
+                  <div className="commerce-order-list">
+                    {orders.map((order) => (
+                      <div key={order.code} className="commerce-order-row">
+                        <div>
+                          <strong>{order.code}</strong>
+                          <span>{order.route}</span>
+                        </div>
+                        <span className={`commerce-status commerce-status--${order.statusClass}`}>{order.status}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="commerce-fulfillment-row" aria-label="Order fulfillment stages">
+                    {fulfillmentStages.map((stage) => (
+                      <div key={stage.label}>
+                        <span>{stage.label}</span>
+                        <strong>{stage.value}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="commerce-card commerce-card--catalog">
+                  <div className="dashboard-chart-head">
+                    <span>Product Catalog Management</span>
+                    <strong>{catalogRows.length} items</strong>
+                  </div>
+                  <div className="commerce-catalog-list">
+                    {catalogRows.map((item) => (
+                      <div key={item.name} className="commerce-catalog-row">
+                        <div>
+                          <strong>{item.name}</strong>
+                          <span>{item.detail}</span>
+                        </div>
+                        <span>{item.status}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="commerce-card commerce-card--insights">
+                  <div className="dashboard-chart-head">
+                    <span>Inventory Tracking</span>
+                    <strong>Customer Analytics</strong>
+                  </div>
+                  <div className="commerce-progress-list">
+                    {inventoryItems.map((item) => (
+                      <div key={item.label} className="commerce-progress-item">
+                        <div className="commerce-progress-label">
+                          <span>{item.label}</span>
+                          <strong>{item.value}%</strong>
+                        </div>
+                        <div className="commerce-progress-track" aria-hidden="true">
+                          <span className="commerce-progress-fill" style={{ width: `${item.value}%` }} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="commerce-metric-grid">
+                    {customerMetrics.map((metric) => (
+                      <div key={metric.label} className="commerce-metric-card">
+                        <span>{metric.label}</span>
+                        <strong>{metric.value}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            ) : (
+              <>
+                <div className="dashboard-chart-card">
+                  <div className="dashboard-chart-head">
+                    <span>Weekly activity</span>
+                    <strong>Live data</strong>
+                  </div>
+                  <div className="dashboard-bars" aria-hidden="true">
+                    {chartBars.map((height, index) => (
+                      <div key={`${title}-${index}`} className="dashboard-bar-wrap">
+                        <span className="dashboard-bar" style={{ height: `${height}%` }} />
+                        <small>M{index + 1}</small>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+
+                <div className="dashboard-table" role="presentation">
+                  {rows.map((row) => (
+                    <div key={row[0]} className="dashboard-table__row">
+                      <span>{row[0]}</span>
+                      <span>{row[1]}</span>
+                      <span>{row[2]}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -350,7 +527,7 @@ function App() {
             <img src={Logo} className="brand-logo" alt="Aether Systems logo" />
             <span className="brand-text">
               <strong>AETHER SYSTEMS</strong>
-              <small>Enterprise software for property and infrastructure organizations</small>
+              <small>Software, automation, and digital products</small>
             </span>
           </a>
 
@@ -376,7 +553,7 @@ function App() {
           </nav>
 
           <a className="header-cta" href="#contact" onClick={closeMobileNav}>
-            Request demo
+            Book a consultation
           </a>
         </div>
       </header>
@@ -385,26 +562,27 @@ function App() {
         <section id="home" className="hero-section section-pad">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">Modern SaaS for Africa</p>
-              <h1>Enterprise software for property and infrastructure organizations.</h1>
+              <p className="eyebrow">Technology for modern business</p>
+              <h1>Modern software for websites, systems, and automation.</h1>
               <p className="hero-lead">
-                Aether Systems helps property, construction, and operations teams run with more clarity through
-                secure workflows, live dashboards, and product-led delivery.
+                Aether Systems helps businesses digitize, automate, and scale their operations through modern
+                software solutions. We design websites, build custom systems, connect APIs, and create e-commerce
+                and SaaS products that improve efficiency and customer experience.
               </p>
 
               <div className="hero-actions">
                 <a className="btn btn-primary" href="#contact">
-                  Request demo
+                  Book a consultation
                 </a>
-                <a className="btn btn-secondary" href="#product">
-                  Explore Aether Property
+                <a className="btn btn-secondary" href="#services">
+                  See services
                 </a>
               </div>
 
               <div className="hero-trust">
-                <span>Microsoft meets Stripe</span>
-                <span>Professional and enterprise-focused</span>
-                <span>Dark blue and white brand system</span>
+                <span>Websites and portals</span>
+                <span>Automation and integrations</span>
+                <span>SaaS and e-commerce</span>
               </div>
 
               <div className="hero-stats">
@@ -424,14 +602,14 @@ function App() {
 
           <div className="container hero-demo-band">
             <ContactForm
-              eyebrow="Demo request"
-              title="See the platform in action"
-              description="Tell us what your team manages today and we will tailor the walkthrough."
-              submitLabel="Request demo"
+              eyebrow="Consultation"
+              title="Tell us what your team needs to improve"
+              description="We will tailor the conversation to your goals, current systems, and the business outcome you want to achieve."
+              submitLabel="Book a consultation"
               note="Usually reply within one business day."
               idPrefix="hero-demo"
               compact
-              messagePlaceholder="What part of property or construction operations do you want to streamline?"
+              messagePlaceholder="Describe the workflows or systems you want to modernize."
             />
           </div>
         </section>
@@ -440,25 +618,25 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="About"
-              title="Aether Systems builds software for teams that need operational clarity at enterprise scale."
-              copy="We focus on product design, implementation discipline, and the trust required to support property and infrastructure organizations across Africa."
+              title="Aether Systems is a long-term technology partner for businesses that want to modernize how they operate."
+              copy="We combine software engineering, automation, product thinking, and delivery discipline to help organizations build better internal systems and stronger digital experiences."
             />
 
             <div className="about-layout">
               <article className="surface-card about-story">
                 <p className="card-kicker">Company story</p>
-                <h3>Built for the reality of property and construction operations.</h3>
+                <h3>Built to support change, not just launch it.</h3>
                 <p>
                   Aether Systems is shaped around the idea that enterprise software should be simple to trust, easy
                   to use, and strong enough to support real-world operations where every update, approval, and
-                  exception matters.
+                  customer interaction matters.
                 </p>
 
                 <div className="about-pill-row" aria-label="Core brand themes">
-                  <span>Vision</span>
-                  <span>Governance</span>
-                  <span>Scale</span>
-                  <span>Clarity</span>
+                  <span>Strategy</span>
+                  <span>Engineering</span>
+                  <span>Automation</span>
+                  <span>Partnership</span>
                 </div>
               </article>
 
@@ -474,12 +652,12 @@ function App() {
 
             <div className="leadership-band surface-card">
               <div className="leadership-band__copy">
-                <p className="card-kicker">Leadership</p>
-                <h3>Built and delivered by people who respect enterprise operations.</h3>
+                <p className="card-kicker">How we work</p>
+                <h3>Structured delivery that keeps the business goal at the center.</h3>
               </div>
 
               <div className="leadership-grid">
-                {leadership.map((item) => (
+                {deliveryApproach.map((item) => (
                   <article key={item.role} className="leadership-card">
                     <strong>{item.role}</strong>
                     <p>{item.text}</p>
@@ -490,36 +668,40 @@ function App() {
           </div>
         </section>
 
-        <section id="solutions" className="section-pad section-tinted">
+        <section id="services" className="section-pad section-tinted">
           <div className="container">
             <SectionHeading
-              eyebrow="Solutions"
-              title="A focused suite of enterprise tools for property, construction, and transformation teams."
-              copy="The platform starts with Aether Property and extends into the workflows and integrations that support broader operational change."
+              eyebrow="Services"
+              title="Services designed to solve business problems and improve operational efficiency."
+              copy="From customer-facing websites to internal software systems, we design and deliver technology that helps teams work faster, reduce manual effort, and scale with confidence."
             />
 
             <div className="solutions-grid">
-              {solutions.map((solution, index) => (
-                <article key={solution.title} className="surface-card solution-card">
+              {services.map((service, index) => (
+                <article key={service.title} className="surface-card solution-card">
                   <div className="solution-card__top">
                     <span className="solution-index">0{index + 1}</span>
-                    <span className="solution-chip">Enterprise</span>
+                    <span className="solution-chip">Service</span>
                   </div>
-                  <h3>{solution.title}</h3>
-                  <p>{solution.description}</p>
-                  <ul>
-                    {solution.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="industries" className="section-pad section-light">
+          <div className="container">
+            <SectionHeading
+              eyebrow="Industries"
+              title="Industries We Serve"
+              copy="Aether Systems works across sectors, bringing the same core expertise in software engineering, automation, and digital transformation to every engagement."
+            />
 
             <div className="industries-band surface-card">
               <div className="industries-band__copy">
-                <p className="card-kicker">Industries</p>
-                <h3>Designed for teams managing built assets, active projects, and public-facing services.</h3>
+                <h3>Whether the brief is for a construction firm, retailer, or startup, we bring the same software discipline and delivery standards.</h3>
               </div>
               <div className="industry-grid">
                 {industries.map((industry) => (
@@ -532,25 +714,26 @@ function App() {
           </div>
         </section>
 
-        <section id="product" className="section-pad section-light">
+        <section id="showcase" className="section-pad section-tinted">
           <div className="container">
             <SectionHeading
-              eyebrow="Product"
-              title="Aether Property brings modern SaaS discipline to property management operations."
-              copy="From tenant and unit oversight to maintenance, approvals, and reporting, the product is designed to keep every team looking at the same truth."
+              eyebrow="Solutions"
+              title="What We Build"
+              copy="We deliver the software layer behind modern businesses, from customer-facing experiences to internal systems that keep operations moving."
             />
 
             <div className="product-layout">
               <article className="surface-card product-summary">
-                <p className="card-kicker">Aether Property</p>
-                <h3>One operating system for the people, places, and processes in your portfolio.</h3>
+                <p className="card-kicker">Delivery scope</p>
+                <h3>One partner for the digital systems behind your business.</h3>
                 <p>
-                  The product is designed to support property managers, operations leaders, and executives with a
-                  clean interface that feels as polished as the best modern SaaS tools.
+                  Aether Systems designs business websites, customer portals, internal business systems,
+                  e-commerce platforms, automation tools, API-driven applications, and SaaS platforms that help
+                  teams work faster and grow with confidence.
                 </p>
 
                 <div className="feature-grid">
-                  {productFeatures.map((feature) => (
+                  {capabilityCards.map((feature) => (
                     <article key={feature.title} className="feature-card">
                       <strong>{feature.title}</strong>
                       <p>{feature.text}</p>
@@ -560,15 +743,15 @@ function App() {
 
                 <div className="product-actions">
                   <a className="btn btn-primary" href="#contact">
-                    Request demo
+                    Book a consultation
                   </a>
-                  <a className="btn btn-secondary" href="#solutions">
-                    View solutions
+                  <a className="btn btn-secondary" href="#industries">
+                    See industries
                   </a>
                 </div>
               </article>
 
-              <div className="dashboard-stack" aria-label="Placeholder dashboard screenshots">
+              <div className="dashboard-stack" aria-label="Animated dashboard showcase">
                 {dashboards.map((dashboard) => (
                   <DashboardMockup key={dashboard.title} {...dashboard} />
                 ))}
@@ -581,8 +764,8 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="Contact"
-              title="Start with a demo request or a sales conversation."
-              copy="Share the portfolio size, teams involved, and the operational problems you want to solve. We will shape the next step around your real context."
+              title="Start with a consultation or a project conversation."
+              copy="Share the workflow, customer experience, or operational challenge you want to solve and we will shape the next step around that goal."
             />
 
             <div className="contact-layout">
@@ -599,24 +782,24 @@ function App() {
 
                 <article className="surface-card contact-cta-card">
                   <p className="card-kicker">What to include</p>
-                  <h3>Tell us about the workflow, the stakeholders, and the rollout scope.</h3>
+                  <h3>Tell us about the workflow, the stakeholders, and the outcome you want to improve.</h3>
                   <ul>
-                    <li>Portfolio size or project volume</li>
-                    <li>Current systems or spreadsheets in use</li>
-                    <li>Timeline, compliance, and reporting needs</li>
+                    <li>Current systems, tools, or manual processes in use</li>
+                    <li>Timeline, stakeholders, and key business constraints</li>
+                    <li>The operational or customer outcome you want to improve</li>
                   </ul>
                 </article>
               </div>
 
               <ContactForm
-                eyebrow="Sales inquiry"
-                title="Book a tailored walkthrough"
-                description="Use this form for a demo request, a sales conversation, or a product discussion with the team."
+                eyebrow="Project inquiry"
+                title="Book a tailored consultation"
+                description="Use this form for a website brief, software project, automation request, e-commerce build, or integration discussion."
                 submitLabel="Send inquiry"
                 note="We respond with the next best step for your team."
                 idPrefix="sales"
                 className="contact-form-panel"
-                messagePlaceholder="Describe your portfolio, operational challenge, and what success looks like."
+                messagePlaceholder="Describe your business challenge, current tools, and the outcome you want to achieve."
               />
             </div>
           </div>
@@ -627,7 +810,7 @@ function App() {
         <div className="container footer-row">
           <div>
             <strong>Aether Systems</strong>
-            <p>Enterprise software for property and infrastructure organizations across Africa.</p>
+            <p>Technology solutions that help businesses digitize, automate, and scale.</p>
           </div>
 
           <nav className="footer-nav" aria-label="Footer">
