@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Logo from './Log.png'
+import AdvancedWeb from './advanced_web.jpg'
+import ProStore from './pro_store.jpg'
+import Security from './security.jpg'
+import Speed from './speed.jpg'
 import ContactForm from './components/ContactForm'
 
 const navItems = [
@@ -134,6 +138,7 @@ const dashboards = [
     title: 'Operations Overview',
     subtitle: 'Revenue, delivery, and active workstreams',
     accent: '#2f7cf6',
+    accentSecondary: '#7cc0ff',
     sidebarItems: ['Overview', 'Projects', 'Tasks', 'Finance', 'Reports'],
     stats: [
       { label: 'Active accounts', value: '24' },
@@ -150,7 +155,8 @@ const dashboards = [
   {
     title: 'Automation Command',
     subtitle: 'Requests, tasks, and SLA tracking',
-    accent: '#0f5bd7',
+    accent: '#12b8a6',
+    accentSecondary: '#7ae3cf',
     sidebarItems: ['Queue', 'Vendors', 'Assets', 'Inspections', 'SLA'],
     stats: [
       { label: 'Automations', value: '18' },
@@ -167,7 +173,8 @@ const dashboards = [
   {
     title: 'Executive Reporting',
     subtitle: 'Board-level performance and trends',
-    accent: '#184ea8',
+    accent: '#7758ff',
+    accentSecondary: '#c6b2ff',
     sidebarItems: ['Summary', 'Programs', 'Budget', 'Escalations', 'Exports'],
     stats: [
       { label: 'Programs live', value: '16' },
@@ -184,7 +191,8 @@ const dashboards = [
   {
     title: 'E-Commerce Control',
     subtitle: 'Revenue, orders, inventory, and fulfillment',
-    accent: '#0d74d1',
+    accent: '#ff8d42',
+    accentSecondary: '#ffd08b',
     layout: 'commerce',
     sidebarItems: ['Overview', 'Orders', 'Catalog', 'Inventory', 'Insights'],
     stats: [
@@ -244,6 +252,143 @@ const contactCards = [
   },
 ]
 
+const brandVisualSignals = [
+  {
+    value: 'Authentic',
+    label: 'Real project imagery and grounded surfaces',
+  },
+  {
+    value: 'Layered',
+    label: 'Color, motion, and depth instead of flat blocks',
+  },
+  {
+    value: 'Clear',
+    label: 'Visual cues that guide attention and action',
+  },
+]
+
+const brandVisualTiles = [
+  {
+    title: 'Web presence',
+    text: 'Sharper landing pages and product screens that feel credible on first glance.',
+    src: AdvancedWeb,
+    alt: 'Website experience mockup with layered screens and analytics',
+  },
+  {
+    title: 'Commerce flow',
+    text: 'Retail and order journeys with cleaner hierarchy and conversion-focused detail.',
+    src: ProStore,
+    alt: 'E-commerce interface with product cards and checkout layout',
+  },
+  {
+    title: 'Security posture',
+    text: 'Trust signals, permissions, and safer operations across the product.',
+    src: Security,
+    alt: 'Security-themed dashboard with data protection visuals',
+  },
+  {
+    title: 'Performance',
+    text: 'Faster-feeling interfaces with better pacing and lighter visual noise.',
+    src: Speed,
+    alt: 'Performance-focused visual with speed and optimization cues',
+  },
+]
+
+const processSteps = [
+  {
+    title: 'Discover',
+    text: 'We map users, workflow, and constraints before the build starts.',
+    accent: '#2f7cf6',
+  },
+  {
+    title: 'Shape',
+    text: 'We craft the visual system, information hierarchy, and architecture.',
+    accent: '#12b8a6',
+  },
+  {
+    title: 'Deliver',
+    text: 'We launch, measure, and refine so the product keeps improving.',
+    accent: '#ff8d42',
+  },
+]
+
+function BrandVisualBand() {
+  return (
+    <div className="surface-card brand-visual-band">
+      <div className="brand-visual-band__copy">
+        <p className="card-kicker">Visual direction</p>
+        <h3>We keep the hero strong, then let imagery and color carry the rest of the story.</h3>
+        <p>
+          The collage below uses project-inspired visuals, softer gradients, and clear labels so the experience
+          feels authentic instead of flat.
+        </p>
+
+        <div className="brand-visual-signals" aria-label="Visual design signals">
+          {brandVisualSignals.map((signal) => (
+            <div key={signal.label} className="brand-visual-signal">
+              <span>{signal.value}</span>
+              <strong>{signal.label}</strong>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="brand-visual-grid" aria-label="Aether Systems visual collage">
+        {brandVisualTiles.map((tile, index) => (
+          <article
+            key={tile.title}
+            className={`brand-visual-card ${index === 0 ? 'brand-visual-card--hero' : ''}`}
+          >
+            <img src={tile.src} alt={tile.alt} />
+            <div className="brand-visual-card__overlay">
+              <span>{tile.title}</span>
+              <p>{tile.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function ProcessRibbon() {
+  return (
+    <div className="surface-card process-ribbon">
+      <div className="process-ribbon__art" aria-hidden="true">
+        <svg viewBox="0 0 960 180" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="processRibbonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#2f7cf6" />
+              <stop offset="46%" stopColor="#12b8a6" />
+              <stop offset="100%" stopColor="#ff8d42" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M40 110 C 170 32, 310 32, 430 92 S 670 164, 920 54"
+            fill="none"
+            stroke="url(#processRibbonGradient)"
+            strokeLinecap="round"
+            strokeWidth="8"
+          />
+          <circle cx="120" cy="106" r="16" fill="#ffffff" stroke="#2f7cf6" strokeWidth="6" />
+          <circle cx="480" cy="70" r="16" fill="#ffffff" stroke="#12b8a6" strokeWidth="6" />
+          <circle cx="840" cy="90" r="16" fill="#ffffff" stroke="#ff8d42" strokeWidth="6" />
+        </svg>
+      </div>
+
+      <div className="process-ribbon__steps">
+        {processSteps.map((step, index) => (
+          <article key={step.title} className="process-step" style={{ '--step-accent': step.accent }}>
+            <span className="process-step__index">0{index + 1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function SectionHeading({ eyebrow, title, copy }) {
   return (
     <div className="section-heading">
@@ -258,6 +403,7 @@ function DashboardMockup({
   title,
   subtitle,
   accent,
+  accentSecondary = accent,
   sidebarItems,
   stats = [],
   chartBars = [],
@@ -271,7 +417,10 @@ function DashboardMockup({
   fulfillmentStages = [],
 }) {
   return (
-    <article className={`dashboard-shot ${layout === 'commerce' ? 'dashboard-shot--commerce' : ''}`} style={{ '--shot-accent': accent }}>
+    <article
+      className={`dashboard-shot ${layout === 'commerce' ? 'dashboard-shot--commerce' : ''}`}
+      style={{ '--shot-accent': accent, '--shot-accent-2': accentSecondary }}
+    >
       <div className="dashboard-window">
         <div className="dashboard-window__topbar">
           <div className="window-dots" aria-hidden="true">
@@ -650,6 +799,8 @@ function App() {
               </div>
             </div>
 
+            <BrandVisualBand />
+
             <div className="leadership-band surface-card">
               <div className="leadership-band__copy">
                 <p className="card-kicker">How we work</p>
@@ -665,6 +816,7 @@ function App() {
                 ))}
               </div>
             </div>
+
           </div>
         </section>
 
@@ -688,6 +840,8 @@ function App() {
                 </article>
               ))}
             </div>
+
+            <ProcessRibbon />
           </div>
         </section>
 
