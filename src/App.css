@@ -342,7 +342,7 @@ textarea {
 .hero-copy h1 {
   margin: 0;
   max-width: 14ch;
-  font-size: clamp(3rem, 6vw, 5.4rem);
+  font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -1571,7 +1571,7 @@ textarea {
   }
 
   .hero-copy h1 {
-    max-width: 14ch;
+    max-width: 5ch;
   }
 
   .hero-dashboard-stage {
