@@ -1,4 +1,3 @@
-import React from "react";
 import brick from "../assets/brick.png";
 import quiz from "../assets/quiz.png";
 import diamond from "../assets/diamond.jpg";

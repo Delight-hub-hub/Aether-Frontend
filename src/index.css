@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-family: 'Manrope', 'Space Grotesk', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -20,10 +20,6 @@ body,
 
 body {
   margin: 0;
-}
-
-a {
-  color: inherit;
 }
 
 button,
