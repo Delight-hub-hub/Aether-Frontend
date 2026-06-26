@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-import Logo from './Log.png'
+import Logo from './Log.jpeg'
 import ContactForm from './components/ContactForm'
 
 const navItems = [
@@ -748,33 +748,40 @@ function HeroIntro() {
   )
 }
 
+const heroNetworkNodes = Array.from({ length: 32 }).map(() => ({
+  x: `${Math.random() * 100}%`,
+  y: `${Math.random() * 100}%`,
+  delay: `${Math.random() * 8}s`,
+  duration: `${8 + Math.random() * 6}s`,
+}))
+
 function HeroAtmosphere() {
   return (
     <div className="hero-atmosphere" aria-hidden="true">
-      <div className="hero-mesh hero-mesh--one" />
-      <div className="hero-mesh hero-mesh--two" />
+
       <div className="hero-grid" />
-      <div className="hero-beam hero-beam--one" />
-      <div className="hero-beam hero-beam--two" />
-      <div className="hero-orb hero-orb--one" />
-      <div className="hero-orb hero-orb--two" />
-      <div className="hero-glass hero-glass--one" />
-      <div className="hero-glass hero-glass--two" />
-      <div className="hero-particles">
-        {heroParticles.map((particle, index) => (
+
+      <div className="hero-network">
+        {heroNetworkNodes.map((node, i) => (
           <span
-            key={index}
+            key={i}
+            className="network-node"
             style={{
-              top: particle.top,
-              left: particle.left,
-              width: particle.size,
-              height: particle.size,
-              animationDuration: particle.duration,
-              animationDelay: particle.delay,
+              "--x": node.x,
+              "--y": node.y,
+              "--delay": node.delay,
+              "--duration": node.duration,
             }}
           />
         ))}
       </div>
+
+      <div className="hero-stream hero-stream-1" />
+      <div className="hero-stream hero-stream-2" />
+      <div className="hero-stream hero-stream-3" />
+
+      <div className="hero-noise" />
+
     </div>
   )
 }

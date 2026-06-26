@@ -35,14 +35,14 @@ body {
   min-height: 100vh;
   color: var(--text);
   /* Pure high-contrast technical pitch black foundation */
-  background: #000000;
+  background: #0a0a0aa1;
   font-family: var(--font-body);
   overflow-x: hidden;
   color-scheme: dark;
 }
 
 body::selection {
-  background: rgba(0, 0, 0, 0.945);
+  background: rgba(0, 0, 0, 0);
   color: #ffffff;
 }
 
@@ -79,12 +79,125 @@ textarea {
 }
 
 .app-shell {
-  position: relative;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 25% 0%, rgba(75, 215, 255, 0.06), transparent 20%),
-    radial-gradient(circle at 85% 18%, rgba(255, 126, 224, 0.05), transparent 24%),
-    linear-gradient(180deg, rgba(5, 8, 18, 0) 0%, rgba(5, 8, 18, 0) 30%, rgba(5, 8, 18, 0.2) 100%);
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center,
+            rgba(12,18,35,.75) 0%,
+            #05070f 55%,
+            #020305 100%);
+}
+.app-shell::before{
+    content:"";
+    position:absolute;
+    inset:-30%;
+    z-index:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,255,255,.06) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0,255,255,.06) 1px,
+            transparent 1px
+        );
+
+    background-size:70px 70px;
+
+    transform:perspective(900px)
+              rotateX(78deg)
+              translateY(-5%);
+
+    transform-origin:center;
+
+    animation:gridMove 18s linear infinite;
+
+    opacity:.55;
+}
+.app-shell::after{
+    content:"";
+    position:absolute;
+    inset:-25%;
+    z-index:0;
+
+    background:
+
+    radial-gradient(circle,
+        rgba(0,255,255,.12),
+        transparent 35%),
+
+    radial-gradient(circle,
+        rgba(40,120,255,.10),
+        transparent 40%),
+
+    radial-gradient(circle,
+        rgba(90,0,255,.10),
+        transparent 45%);
+
+    filter:blur(90px);
+
+    animation:aurora 20s ease-in-out infinite alternate;
+}
+@keyframes gridMove{
+
+    from{
+
+        transform:
+        perspective(900px)
+        rotateX(78deg)
+        translateY(-5%)
+        translateX(0);
+
+    }
+
+    to{
+
+        transform:
+        perspective(900px)
+        rotateX(78deg)
+        translateY(-12%)
+        translateX(-70px);
+
+    }
+
+}
+@keyframes aurora{
+
+    0%{
+
+        transform:
+        translate(-10%,-8%)
+        rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+        translate(8%,5%)
+        rotate(120deg);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-6%,10%)
+        rotate(240deg);
+
+    }
+
+}
+.site-header,
+main,
+footer{
+    position:relative;
+    z-index:2;
 }
 
 .container {
@@ -115,7 +228,7 @@ textarea {
   inset: 0 0 auto;
   z-index: 100;
   border-bottom: 1px solid transparent;
-  background: rgba(5, 8, 18, 0.28);
+  background: rgba(89, 112, 110, 0.356);
   backdrop-filter: blur(16px) saturate(160%);
   transition:
     background-color 0.25s ease,
@@ -145,8 +258,9 @@ textarea {
 }
 
 .brand-logo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 380px;
   object-fit: contain;
   flex: none;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
