@@ -3,6 +3,11 @@ import './App.css'
 import Logo from './Log.jpeg'
 import ContactForm from './components/ContactForm'
 
+
+
+
+
+
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'services', label: 'Services' },
@@ -156,9 +161,38 @@ const heroParticles = Array.from({ length: 14 }, (_, index) => {
 })
 
 const heroWordmark = 'AETHER SYSTEMS'
-const heroTagline = 'intelligent software solutions.'
+const heroTagline = 'building scalable and intelligent software solutions.'
+
 
 function useRevealObserver() {
+
+  
+
+useEffect(() => {
+
+    const text =
+        "  • INNOVATION • INTELLIGENCE • AUTOMATION • ";
+
+    const container = document.getElementById("rotatingText");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    [...text].forEach((char, i) => {
+
+        const span = document.createElement("span");
+
+        span.innerText = char;
+
+        span.style.transform =
+            `rotate(${i * 9}deg) translateY(-105px)`;
+
+        container.appendChild(span);
+
+    });
+
+}, []);
   useEffect(() => {
     const nodes = document.querySelectorAll('.reveal')
     if (!nodes.length) return undefined
@@ -722,6 +756,7 @@ function HeroIntro() {
   const isTypingComplete = typedTagline.length >= heroTagline.length
 
   return (
+    
     <div className="hero-copy">
       <h1 className="hero-brand">{heroWordmark}</h1>
 
@@ -744,16 +779,38 @@ function HeroIntro() {
           See Services
         </a>
       </div>
+      <div className="hero-rotating-badge">
+  <div className="rotating-text">
+    <span id="rotatingText"></span>
+  </div>
+
+  <div className="center-arrow">
+    ↗
+  </div>
+</div>
     </div>
   )
 }
 
+document.addEventListener("mousemove",(e)=>{
+
+document.documentElement.style.setProperty(
+"--mouse-x",
+`${e.clientX}px`
+);
+
+document.documentElement.style.setProperty(
+"--mouse-y",
+`${e.clientY}px`
+);
+
+});
 const heroNetworkNodes = Array.from({ length: 32 }).map(() => ({
   x: `${Math.random() * 100}%`,
   y: `${Math.random() * 100}%`,
   delay: `${Math.random() * 8}s`,
   duration: `${8 + Math.random() * 6}s`,
-}))
+}))         
 
 function HeroAtmosphere() {
   return (
@@ -837,8 +894,8 @@ function App() {
           <a href="#home" className="brand" aria-label="Aether Systems home" onClick={closeMobileNav}>
             <img src={Logo} className="brand-logo" alt="Aether Systems logo" />
             <span className="brand-copy">
-              <strong>Aether Systems</strong>
-              <small>Software development agency</small>
+              <strong>AETHER SYSTEMS</strong>
+              <small>Software consultancy</small>
             </span>
           </a>
 
@@ -990,6 +1047,84 @@ function App() {
             />
           </div>
         </section>
+        <section className="testimonials-section section-pad" id="testimonials">
+  <div className="container section-shell">
+
+    <div className="section-heading reveal">
+      <p className="eyebrow">CLIENT FEEDBACK</p>
+      <h2>Trusted to Build Modern Digital Solutions</h2>
+      <p className="section-copy">
+        We focus on quality engineering, transparent communication and long-term partnerships.
+      </p>
+    </div>
+
+    <div className="testimonials-grid">
+
+      <article className="testimonial-card reveal">
+        <div className="quote-mark">“</div>
+
+        <p>
+          Aether Systems transformed our workflow into a modern digital
+          experience. Communication was excellent and delivery exceeded our
+          expectations.
+        </p>
+
+        <div className="testimonial-footer">
+          <div>
+            <strong>John Smith</strong>
+            <span>Restaurant Owner</span>
+          </div>
+
+          <div className="rating">
+            ★★★★★
+          </div>
+        </div>
+      </article>
+
+      <article className="testimonial-card reveal">
+        <div className="quote-mark">“</div>
+
+        <p>
+          Professional, innovative and extremely responsive. The dashboard they
+          built has significantly improved our day-to-day operations.
+        </p>
+
+        <div className="testimonial-footer">
+          <div>
+            <strong>Sarah Johnson</strong>
+            <span>Operations Manager</span>
+          </div>
+
+          <div className="rating">
+            ★★★★★
+          </div>
+        </div>
+      </article>
+
+      <article className="testimonial-card reveal">
+        <div className="quote-mark">“</div>
+
+        <p>
+          From planning to deployment, the entire process felt organised,
+          transparent and technically impressive.
+        </p>
+
+        <div className="testimonial-footer">
+          <div>
+            <strong>Michael Brown</strong>
+            <span>Business Owner</span>
+          </div>
+
+          <div className="rating">
+            ★★★★★
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
       </main>
 
       <footer className="site-footer">
@@ -1007,8 +1142,26 @@ function App() {
           </nav>
         </div>
       </footer>
+      <a
+  href="https://wa.me/2773666547"
+  className="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.03 0C5.42 0 .05 5.37.05 11.98c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.62a11.92 11.92 0 0 0 5.83 1.49h.01c6.61 0 11.98-5.37 11.98-11.98 0-3.2-1.25-6.21-3.5-8.41zM12.04 21.8a9.9 9.9 0 0 1-5.05-1.39l-.36-.22-3.68.96.98-3.58-.23-.37a9.88 9.88 0 1 1 8.34 4.6zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.51-1.8-1.68-2.1-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.13 3.26 5.15 4.57.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+  </svg>
+</a>
     </div>
   )
+  
 }
 
 export default App
